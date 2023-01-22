@@ -1,5 +1,23 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3309}/${DB_DB:BT22}}?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: ${DB_USR:root}
-    password: ${DB_PASS:}
+    url: jdbc:mysql://localhost:3307/bt22?jdbcCompliantTruncation=false&relaxAutoCommit=true&zeroDateTimeBehavior=convertToNull&useFastDateParsing=false&sessionVariables=sql_mode=""
+    username: root
+    password:
+
+configs:
+  security:
+    authentication:
+      jwt:
+        app-authorization: ${APP_AUTHORIZATION:BT22}
+        header: ${JWT_HEADER:Authorization}
+        expires-in : ${JWT_EXPIRES_IN:600}
+        cookie: ${JWT_COOKIE:AUTH-TOKEN}
+
+logging:
+  level:
+    root: INFO
+
+  flyway:
+  enabled: true
+  baseline-one-migrate: true
+  validateMigrationNaming: false
