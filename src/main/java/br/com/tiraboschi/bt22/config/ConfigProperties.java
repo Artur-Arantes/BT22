@@ -54,11 +54,7 @@ public class ConfigProperties {
         private String header;
         private Long expiresIn;
         private String cookie;
-
-
       }
     }
-
-
   }
 }
