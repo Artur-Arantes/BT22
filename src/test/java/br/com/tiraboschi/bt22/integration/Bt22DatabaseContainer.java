@@ -5,7 +5,7 @@ import org.testcontainers.containers.MySQLContainer;
 public class Bt22DatabaseContainer extends MySQLContainer<Bt22DatabaseContainer> {
 
   public static final String MYSQL_VERSION = "mysql:5.7";
-  public static final String APP_NAME = "offnance";
+  public static final String APP_NAME = "bt22";
 
   private boolean isActive;
 

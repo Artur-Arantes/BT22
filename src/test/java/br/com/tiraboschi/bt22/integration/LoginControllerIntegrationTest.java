@@ -64,6 +64,6 @@ public class LoginControllerIntegrationTest {
           .then()
           .statusCode(HttpStatus.UNAUTHORIZED.value());
     }
-
   }
+
 }

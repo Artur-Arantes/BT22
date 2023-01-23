@@ -17,11 +17,11 @@ public class UserServiceImp implements UserService {
   @Autowired
   private final UserRepository userRepository;
 
-
   @Override
   public User findByUsername(@NonNull final String login) {
     final var user = userRepository.findByUsername(login);
     return user.filter(User::isEnabled).orElseThrow();
   }
+
 
 }

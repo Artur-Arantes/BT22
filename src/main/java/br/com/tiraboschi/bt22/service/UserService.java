@@ -7,5 +7,4 @@ public interface UserService {
 
   User findByUsername(String user) throws UsernameNotFoundException;
 
-
 }

@@ -44,5 +44,4 @@ public class AnonymousAuthentication extends AbstractAuthenticationToken {
     return true;
   }
 
-
 }

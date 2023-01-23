@@ -25,7 +25,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Getter
 @Builder
-@ToString(callSuper = true, includeFieldNames = true)
+@ToString(callSuper = true)
 @EqualsAndHashCode(of = "id")
 @AttributeOverrides(value = {
     @AttributeOverride(name = "id", column = @Column(name = "id_pes")),
@@ -39,7 +39,7 @@ public class Person extends BaseEntity {
   @Column(name = "nom_pes")
   private String name;
 
-  @OneToOne(mappedBy = "person", fetch = FetchType.LAZY, optional = true)
+  @OneToOne(mappedBy = "person", fetch = FetchType.LAZY)
   @JsonManagedReference
   @JoinColumn(name = "id_pes")
   @ToString.Exclude
